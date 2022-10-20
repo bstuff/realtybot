@@ -1,0 +1,56 @@
+{
+  "name": "realtybot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "license": "",
+  "sideEffects": false,
+  "scripts": {
+    "build": "run-s build:*",
+    "build:remix": "remix build",
+    "build:server": "NODE_ENV=production npm run server",
+    "clean": "rm -rf ./build ./public/build",
+    "dev": "run-p dev:*",
+    "dev:server": "NODE_ENV=development nodemon --inspect --require ./node_modules/dotenv/config ./build/server.js --watch ./build/server.js",
+    "dev:build": "NODE_ENV=development npm run server -- --sourcemap --watch",
+    "dev:remix": "NODE_ENV=development remix watch",
+    "server": "esbuild --bundle --platform=node --format=cjs --external:./node_modules/* ./app/server.ts --outdir=build",
+    "postinstall": "remix setup node",
+    "setup": "prisma migrate",
+    "start": "prisma migrate deploy && NODE_ENV=production node ./build/server.js",
+    "prisma": "prisma",
+    "tunnel": "cloudflared tunnel --url http://localhost:3000 --transport-loglevel debug --name broadway",
+    "_": ""
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@prisma/client": "^4.5.0",
+    "@remix-run/express": "^1.7.3",
+    "@remix-run/react": "^1.7.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remix": "^1.7.3",
+    "telegraf": "^4.10.0",
+    "tiny-invariant": "^1.3.1",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.7.3",
+    "@remix-run/eslint-config": "^1.7.3",
+    "@types/express": "^4.17.14",
+    "@types/morgan": "^1.9.3",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^1.3.2",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "prisma": "^4.5.0",
+    "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
