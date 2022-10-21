@@ -1,5 +1,4 @@
 import type { ActionFunction } from 'remix';
-import type { tg } from '~/telegraf';
 
 export const action: ActionFunction = async (data) => {
   const { request, context } = data;
@@ -16,7 +15,7 @@ export const action: ActionFunction = async (data) => {
     throw new Error('wrong secret provided');
   }
   const webhookUrl = request.url.replace(/^http/, 'https').replace(/\/set-webhook.*/, '');
-  const telegram: typeof tg = context.tg;
+  const telegram = context.tg;
 
   try {
     const whInfoBefore = await telegram.telegram.getWebhookInfo();

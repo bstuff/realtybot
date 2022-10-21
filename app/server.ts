@@ -1,8 +1,12 @@
-import path from 'path';
-import express from 'express';
-import morgan from 'morgan';
 import { createRequestHandler, GetLoadContextFunction } from '@remix-run/express';
+import express from 'express';
+import { createRequire } from 'module';
+import morgan from 'morgan';
+import path from 'path';
 import { tg } from '~/telegraf';
+
+// @ts-expect-error
+const require = createRequire(import.meta.url);
 
 const app = express();
 
@@ -38,26 +42,26 @@ const getLoadContext: GetLoadContextFunction = () => {
   };
 };
 
-app.all(
-  '*',
-  MODE === 'production'
-    ? createRequestHandler({ build: require(BUILD_DIR), getLoadContext })
-    : (...args) => {
-        purgeRequireCache();
-        const requestHandler = createRequestHandler({
-          build: require(BUILD_DIR),
-          mode: MODE,
-          getLoadContext,
-        });
-        return requestHandler(...args);
-      },
-);
+if (MODE === 'production') {
+  app.all('*', createRequestHandler({ build: require(BUILD_DIR), getLoadContext }));
+} else {
+  app.all('*', (...args) => {
+    purgeRequireCache();
+    const requestHandler = createRequestHandler({
+      build: require(BUILD_DIR),
+      mode: MODE,
+      getLoadContext,
+    });
+
+    return requestHandler(...args);
+  });
+}
 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   // require the built app so we're ready when the first request comes in
-  require(BUILD_DIR);
+  require(`${BUILD_DIR}/index.js`);
   console.log(`✅ app ready: http://localhost:${port}`);
 });
 

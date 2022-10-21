@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { ActionFunction, Form, json, LoaderFunction, useActionData, useLoaderData, useTransition } from 'remix';
 import { childLogger } from '~/logger';
-import type { tg } from '~/telegraf';
-
 interface LoaderData {
   userId: string;
 }
@@ -19,7 +17,7 @@ interface ActionData {
 
 export const action: ActionFunction = async ({ params, context, request }) => {
   const logger = childLogger('app.twapp.signup-form');
-  const telegram: typeof tg = context.tg;
+  const telegram = context.tg;
   const formData = await request.formData();
   const values = Object.fromEntries(formData);
   let ok = false;
