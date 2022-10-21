@@ -1,8 +1,10 @@
 import { json, Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from 'remix';
 import type { LinksFunction, MetaFunction, LoaderFunction } from 'remix';
 
+import tailwindStylesheetUrl from "./styles/tailwind.css";
+
 export const links: LinksFunction = () => {
-  return [];
+  return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
 };
 
 export const meta: MetaFunction = () => ({
