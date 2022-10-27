@@ -1,4 +1,5 @@
 import type { ActionFunction } from 'remix';
+import { TG_ADMIN_SECRET } from '~/config';
 
 export const action: ActionFunction = async (data) => {
   const { request, context } = data;
@@ -10,8 +11,7 @@ export const action: ActionFunction = async (data) => {
     throw new Error('no secret provided');
   }
 
-  // just some random secret
-  if (secret !== 'abcdef0123456789abcdef') {
+  if (secret !== TG_ADMIN_SECRET) {
     throw new Error('wrong secret provided');
   }
   const webhookUrl = request.url.replace(/^http/, 'https').replace(/\/set-webhook.*/, '');

@@ -4,3 +4,4 @@ const _TG_TOKEN = process.env.TG_BOT_TOKEN;
 invariant(_TG_TOKEN, 'bot token is undefined');
 
 export const TG_TOKEN = _TG_TOKEN;
+export const TG_ADMIN_SECRET = process.env.TG_ADMIN_SECRET;

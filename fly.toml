@@ -2,7 +2,7 @@
 # Password:    abcdef0123456789abcdef0123456789abcdef0123456789
 # Hostname:    bnk-dev-db.internal
 # Proxy Port:  5432
-# PG Port: 5433
+# PG Port:     5433
 
 # fly.toml file generated for bnk-dev on 2022-04-05T21:02:53+03:00
 
