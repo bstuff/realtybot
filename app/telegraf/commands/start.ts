@@ -7,14 +7,23 @@ export function start(bot: Telegraf) {
   bot.start((ctx) => {
     logger.debug('start handler');
 
-    if (ctx.chat.type !== 'private') {
+    if (ctx.chat.type !== 'private' || ctx.from.is_bot === true) {
       return;
     }
 
-    ctx.reply('тут текст для ответа - поделись контактом', {
+    ctx.reply('Задам всего три вопроса и пришлю подборку подходящих квартир 🙌', {
       reply_markup: {
-        keyboard: [[{ text: 'тут текст для клавиатуры - поделись конактом', request_contact: true }]],
+        inline_keyboard: [
+          [
+            {
+              text: 'Ясно, давай',
+              web_app: { url: `${(ctx as any).hostname}/form` },
+            },
+          ],
+        ],
       },
     });
+
+    return;
   });
 }

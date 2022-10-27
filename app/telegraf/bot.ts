@@ -4,14 +4,14 @@ import { childLogger } from '~/logger';
 
 import * as commands from './commands';
 
-export const bot = new Telegraf(TG_TOKEN);
+export const bot = new Telegraf(TG_TOKEN, { telegram: { testEnv: false } });
 
 const logger = childLogger({ category: 'tg.bot' });
 
 bot.use((ctx, next) => {
   logger.debug(ctx.update);
   next();
-})
+});
 
 for (const key in commands) {
   // @ts-ignore
@@ -21,4 +21,3 @@ for (const key in commands) {
 bot.help((ctx) => {
   ctx.reply('hello world');
 });
-
