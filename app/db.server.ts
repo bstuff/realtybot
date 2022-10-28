@@ -53,8 +53,9 @@ function getClient() {
       },
     },
   });
+
   // connect eagerly
-  client.$connect();
+  // client.$connect();
 
   return client;
 }
