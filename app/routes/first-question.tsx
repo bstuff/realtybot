@@ -1,9 +1,9 @@
 import { LoaderFunction } from 'remix';
-import { ContentContainer, Places, StepsProgress, Text, ToastBlock, WhatLooking } from '~/components';
+import { ContentContainer, FavoriteButton, Places, StepsProgress, Text, ToastBlock, WhatLooking } from '~/components';
 
 interface LoaderData {}
 
-export const loader: LoaderFunction = ({ params }): LoaderData => {
+export const loader: LoaderFunction = (): LoaderData => {
   return {};
 };
 
@@ -32,6 +32,10 @@ export default function () {
       <div className="mt-4">
         <ToastBlock>
           <WhatLooking />
+
+          <div className="mt-3">
+            <FavoriteButton />
+          </div>
         </ToastBlock>
       </div>
     </main>

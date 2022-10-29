@@ -17,7 +17,7 @@ export function start(bot: Telegraf) {
           [
             {
               text: 'Ясно, давай',
-              web_app: { url: `${(ctx as any).hostname}/form` },
+              web_app: { url: `${(ctx as any).hostname}/first-question` },
             },
           ],
         ],

@@ -1,7 +1,7 @@
-import { FC, PropsWithChildren } from 'react';
+import { FC } from 'react';
 import { Text } from '~/components';
 
-export const WhatLooking: FC<PropsWithChildren> = ({ children }) => {
+export const WhatLooking: FC = () => {
   return (
     <div className="flex flex-col gap-3">
       <div className="relative flex flex-row items-center gap-2 overflow-hidden rounded-lg bg-gray-lighter p-3 pl-[50px]">
