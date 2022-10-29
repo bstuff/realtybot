@@ -1,0 +1,1 @@
+export { StepsProgress } from './StepsProgress';
