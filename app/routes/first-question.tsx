@@ -1,8 +1,5 @@
 import { LoaderFunction } from 'remix';
-import { ContentContainer } from '~/components/ContentContainer';
-import { Places } from '~/components/Places';
-import { StepsProgress } from '~/components/StepsProgress';
-import { Text } from '~/components/Text';
+import { ContentContainer, Places, StepsProgress, Text, ToastBlock, WhatLooking } from '~/components';
 
 interface LoaderData {}
 
@@ -12,7 +9,7 @@ export const loader: LoaderFunction = ({ params }): LoaderData => {
 
 export default function () {
   return (
-    <main className="bg-white h-full pt-4">
+    <main className="flex h-full flex-col bg-white pt-4">
       <ContentContainer>
         <h1 className="whitespace-pre-wrap text-center">
           <Text.Heading>{'Расскажите, где вам\nнравится жить?'}</Text.Heading>
@@ -29,6 +26,14 @@ export default function () {
           <Places />
         </div>
       </ContentContainer>
+
+      <div className="flex-1" />
+
+      <div className="mt-4">
+        <ToastBlock>
+          <WhatLooking />
+        </ToastBlock>
+      </div>
     </main>
   );
 }
