@@ -8,7 +8,7 @@ export const MortgageIntro: FC = () => {
         <source srcSet={require('./assets/bg-mortgage-intro.webp')} type="image/webp" />
         <img
           alt=""
-          className="-z-1 absolute top-0 right-0 bottom-0 left-0 h-full w-full object-cover"
+          className="-z-1 absolute inset-0 h-full w-full object-cover"
           src={require('./assets/bg-mortgage-intro.png')}
         />
       </picture>
