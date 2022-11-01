@@ -12,7 +12,7 @@ export default function () {
     <main className="flex h-full flex-col bg-white">
       <MortgageIntro />
 
-      <div className="mt-4">
+      <div className="mt-4 rb-content-container">
         <MortgageIntroFilter />
       </div>
 

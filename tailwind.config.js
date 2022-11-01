@@ -37,7 +37,7 @@ module.exports = {
           '@apply bg-purple text-white': '',
         },
         '.btn-secondary': {
-          '@apply bg-gray-lighter text-purple': '',
+          '@apply bg-gray-light text-purple': '',
         },
         '.rb-content-container': {
           '@apply px-5': '',
@@ -53,6 +53,9 @@ module.exports = {
         },
         '.rb-text-16': {
           '@apply text-[16px] leading-5': '',
+        },
+        '.rb-text-20': {
+          '@apply text-[20px] leading-6': '',
         },
         '.rb-text-heading': {
           '@apply text-xl font-semibold leading-6': '',
