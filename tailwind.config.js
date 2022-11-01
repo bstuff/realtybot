@@ -61,6 +61,9 @@ module.exports = {
         '.rb-text-heading': {
           '@apply text-xl font-semibold leading-6': '',
         },
+        '.rb-text-description': {
+          '@apply rb-text-14 text-gray': '',
+        },
       });
     }),
   ],
