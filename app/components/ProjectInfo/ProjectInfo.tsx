@@ -1,9 +1,14 @@
 import { FC } from 'react';
+import { useToggle } from 'react-use';
 
 export const ProjectInfo: FC = () => {
+  const [isCollapsed, toggleIsCollapsed] = useToggle(true);
+
   return (
     <div className="">
-      <div className="relative aspect-[0.92] w-full overflow-hidden rounded-[20px]">
+      <div
+        className={`relative ${isCollapsed ? 'aspect-[0.92]' : 'aspect-[1.6]'} w-full overflow-hidden rounded-[20px]`}
+      >
         <picture>
           <source srcSet={require('./assets/Rectangle 1195.webp')} type="image/webp" />
           <img
@@ -32,8 +37,38 @@ export const ProjectInfo: FC = () => {
             <img className="ml-2" src={require('~/components/Icons/icn-car-gray-16.svg')} />
             <span className="ml-1">20 мин.</span>
           </div>
-          <a className="rb-text-14 text-purple">Подробнее о проекте</a>
+          <button className="rb-text-14 text-purple" onClick={toggleIsCollapsed}>
+            {isCollapsed ? 'Подробнее о проекте' : 'Свернуть'}
+          </button>
         </div>
+
+        {!isCollapsed && (
+          <>
+            <div className="my-4 border-t border-t-gray-light" />
+            <div className="flex flex-col gap-3">
+              <div className="flex justify-between gap-2">
+                <span className="rb-text-12 text-purple">Студии</span>
+                <span className="rb-text-12 font-medium">от 6,1 млн ₽</span>
+              </div>
+              <div className="flex justify-between gap-2">
+                <span className="rb-text-12 text-purple">1-комн. квартиры</span>
+                <span className="rb-text-12 font-medium">от 6,0 млн ₽</span>
+              </div>
+              <div className="flex justify-between gap-2">
+                <span className="rb-text-12 text-purple">2-комн. квартиры</span>
+                <span className="rb-text-12 font-medium">от 7,5 млн ₽</span>
+              </div>
+              <div className="flex justify-between gap-2">
+                <span className="rb-text-12 text-purple">3-комн. квартиры +</span>
+                <span className="rb-text-12 font-medium">от 7,5 млн ₽</span>
+              </div>
+              <div className="mt-1 flex justify-between gap-2">
+                <span className="rb-text-12">Заселение до 30 апр. 2023</span>
+                <span className="rb-text-12 text-gray">С отделкой</span>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
