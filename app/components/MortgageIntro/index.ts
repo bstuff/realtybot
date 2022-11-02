@@ -1,1 +1,1 @@
-export { MortgageIntro } from './MortgageIntro';
+export * from './MortgageIntro';

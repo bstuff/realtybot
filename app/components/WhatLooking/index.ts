@@ -1,1 +1,1 @@
-export { WhatLooking } from './WhatLooking';
+export * from './WhatLooking';
