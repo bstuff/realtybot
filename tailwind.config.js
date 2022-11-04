@@ -58,6 +58,9 @@ module.exports = {
         '.rb-text-20': {
           '@apply text-[20px] leading-6': '',
         },
+        '.rb-text-title': {
+          '@apply text-[24px] font-semibold leading-7': '',
+        },
         '.rb-text-heading': {
           '@apply text-xl font-semibold leading-6': '',
         },
