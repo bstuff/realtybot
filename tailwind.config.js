@@ -41,7 +41,7 @@ module.exports = {
           '@apply bg-gray-light text-purple': '',
         },
         '.rb-content-container': {
-          '@apply px-5': '',
+          '@apply px-5 w-full overflow-hidden': '',
         },
         '.rb-text-11': {
           '@apply text-[11px] leading-[14px]': '',

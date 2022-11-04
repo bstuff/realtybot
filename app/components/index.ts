@@ -8,6 +8,7 @@ export * from './ProjectHeading';
 export * from './ProjectHeadingImage';
 export * from './ProjectInfo';
 export * from './ProjectPagination';
+export * from './ProjectSummarySlider';
 export * from './StepsProgress';
 export * from './Text';
 export * from './ToastBlock';

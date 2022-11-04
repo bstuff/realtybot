@@ -1,5 +1,5 @@
 import { LoaderFunction } from 'remix';
-import { ProjectHeading, ProjectHeadingImage } from '~/components';
+import { ProjectHeading, ProjectHeadingImage, ProjectSummarySlider } from '~/components';
 
 interface LoaderData {}
 
@@ -14,6 +14,10 @@ export default function () {
       <div className="rb-content-container relative -mt-6 rounded-t-3xl bg-white pt-6">
         <div className="px-1 pb-6">
           <ProjectHeading />
+        </div>
+
+        <div className="-mx-5 box-border justify-between overflow-scroll px-4 flex">
+          <ProjectSummarySlider />
         </div>
       </div>
     </main>
