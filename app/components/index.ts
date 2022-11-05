@@ -4,6 +4,7 @@ export * from './MortgageFilters';
 export * from './MortgageIntro';
 export * from './MortgageIntroFilter';
 export * from './Places';
+export * from './ProjectDetailed';
 export * from './ProjectHeading';
 export * from './ProjectHeadingImage';
 export * from './ProjectInfo';

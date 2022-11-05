@@ -29,16 +29,19 @@ module.exports = {
     plugin(function ({ addComponents }) {
       addComponents({
         '.btn-sm': {
-          '@apply h-8 rounded-lg px-2 text-sm font-medium': '',
+          '@apply h-8 rounded-lg px-4 text-sm font-medium': '',
         },
         '.btn-md': {
-          '@apply h-[42px] rounded-xl px-2 rb-text-14 font-medium': '',
+          '@apply h-[42px] rounded-xl px-6 rb-text-14 font-medium': '',
         },
         '.btn-primary': {
           '@apply bg-purple text-white': '',
         },
         '.btn-secondary': {
           '@apply bg-gray-light text-purple': '',
+        },
+        '.btn-white': {
+          '@apply bg-white text-purple': '',
         },
         '.rb-content-container': {
           '@apply px-5 w-full overflow-hidden': '',
