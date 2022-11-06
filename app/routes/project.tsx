@@ -1,5 +1,5 @@
 import { LoaderFunction } from 'remix';
-import { ProjectDetailed, ProjectHeading, ProjectHeadingImage, ProjectSummarySlider } from '~/components';
+import { ProjectDetailed, ProjectHeading, ProjectHeadingImage, ProjectSummarySlider, ToastBlock } from '~/components';
 
 interface LoaderData {}
 
@@ -23,6 +23,12 @@ export default function () {
         <div className="mt-16">
           <ProjectDetailed />
         </div>
+      </div>
+
+      <div className="mt-6">
+        <ToastBlock>
+          <button className="btn-md btn-primary w-full">Позвонить</button>
+        </ToastBlock>
       </div>
     </main>
   );

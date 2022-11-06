@@ -98,6 +98,37 @@ export const ProjectDetailed: FC = () => {
           <img src={require('./assets/image 138.png')} alt="" />
         </div>
       </div>
+
+      <div className="mt-10">
+        <h3 className="rb-text-title">Особенности</h3>
+        <div className="mt-7 flex justify-between gap-4">
+          <div className="flex flex-1 flex-col items-center justify-between rounded-3xl bg-purple px-6 pt-5 pb-6 text-white">
+            <img src={require('./assets/icn-location.svg')} alt="" />
+            <div className="rb-text-14 mt-3 flex flex-1 items-end text-center font-semibold">Расположение</div>
+            <div className="rb-text-11 mt-1 text-center">На северо-западе Dubai</div>
+          </div>
+          <div className="flex flex-1 flex-col items-center justify-between rounded-3xl bg-gray-light px-6 pt-5 pb-6 text-black">
+            <img src={require('./assets/icn-surrounding.svg')} alt="" />
+            <div className="rb-text-14 mt-3 flex flex-1 items-end text-center font-semibold">Транспорт и окружение</div>
+            <div className="rb-text-11 mt-1 text-center text-gray">Пляжи в 200м. от резиденции</div>
+          </div>
+        </div>
+        <button className="btn-md btn-secondary mt-4 w-full">Все особенности проекта</button>
+      </div>
+
+      <div className="mt-10">
+        <h3 className="rb-text-title">Выбери свое в Peninsula</h3>
+        <div className="mt-5 flex justify-between gap-4">
+          <div className="flex flex-1 flex-col items-center rounded-2xl bg-[#E1F2FB] px-6 py-3">
+            <img src={require('./assets/icn-calc-blue.svg')} alt="" />
+            <div className="rb-text-11 mt-3 text-center font-semibold">Рассчитать ипотеку</div>
+          </div>
+          <div className="flex flex-1 flex-col items-center rounded-2xl bg-[#E7FBE1] px-6 py-3">
+            <img src={require('./assets/icn-plan-green.svg')} alt="" />
+            <div className="rb-text-11 mt-3 text-center font-semibold">Подобрать квартиру</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
