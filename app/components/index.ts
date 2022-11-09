@@ -1,4 +1,5 @@
 export * from './ApartmentCard';
+export * from './ApartmentDetailed';
 export * from './ApartmentPagination';
 export * from './ContentContainer';
 export * from './FavoriteButton';

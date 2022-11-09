@@ -28,6 +28,9 @@ module.exports = {
   plugins: [
     plugin(function ({ addComponents }) {
       addComponents({
+        '.btn': {
+          '@apply text-center': '',
+        },
         '.btn-sm': {
           '@apply h-8 rounded-lg px-4 text-sm font-medium': '',
         },
