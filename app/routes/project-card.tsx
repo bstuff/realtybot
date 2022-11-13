@@ -1,5 +1,6 @@
-import { LoaderFunction } from 'remix';
+import { Link, LoaderFunction } from 'remix';
 import { ToastBlock, ProjectInfo, ProjectPagination } from '~/components';
+import { routes } from '~/config';
 
 interface LoaderData {}
 
@@ -28,7 +29,7 @@ export default function () {
                 Посмотреть 145 вариантов
               </span>
             </button>
-            <button className="btn-md btn-primary">Позвонить</button>
+            <Link to={routes.contactCallback} className="btn btn-md btn-primary">Позвонить</Link>
           </div>
         </ToastBlock>
       </div>

@@ -1,6 +1,7 @@
 export const routes = {
-  'favorites': '/favorites',
-  'mortgageCalculator': '/mortgage-intro',
-  'chooseApartments': '/project-card',
-  'chooseProjects': '/project-card',
+  chooseApartments: '/project-card',
+  chooseProjects: '/project-card',
+  contactCallback: '/contact-callback',
+  favorites: '/favorites',
+  mortgageCalculator: '/mortgage-intro',
 } as const;

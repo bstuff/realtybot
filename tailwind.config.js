@@ -29,7 +29,7 @@ module.exports = {
     plugin(function ({ addComponents }) {
       addComponents({
         '.btn': {
-          '@apply text-center': '',
+          '@apply text-center inline-flex items-center flex-col justify-center': '',
         },
         '.btn-sm': {
           '@apply h-8 rounded-lg px-4 text-sm font-medium': '',
