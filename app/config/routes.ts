@@ -4,4 +4,6 @@ export const routes = {
   contactCallback: '/contact-callback',
   favorites: '/favorites',
   mortgageCalculator: '/mortgage-intro',
+  mortgageCallback: '/mortgage-callback',
+  project: '/project',
 } as const;

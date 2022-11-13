@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'remix';
-import { routes } from '~/config';
+import { routes } from '~/config/routes';
 
 export const Places: FC = () => {
   return (

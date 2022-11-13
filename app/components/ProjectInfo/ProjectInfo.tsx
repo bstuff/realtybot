@@ -1,13 +1,16 @@
 import { FC } from 'react';
 import { useToggle } from 'react-use';
+import { Link } from 'remix';
+import { routes } from '~/config/routes';
 
 export const ProjectInfo: FC = () => {
   const [isCollapsed, toggleIsCollapsed] = useToggle(true);
 
   return (
     <div className="">
-      <div
-        className={`relative ${isCollapsed ? 'aspect-[0.92]' : 'aspect-[1.6]'} w-full overflow-hidden rounded-[20px]`}
+      <Link
+        to={routes.project}
+        className={`block relative ${isCollapsed ? 'aspect-[0.92]' : 'aspect-[1.6]'} w-full overflow-hidden rounded-[20px]`}
       >
         <picture>
           <source srcSet={require('./assets/Rectangle 1195.webp')} type="image/webp" />
@@ -23,13 +26,13 @@ export const ProjectInfo: FC = () => {
             Старт продаж
           </label>
         </div>
-      </div>
+      </Link>
 
       <div className="mt-4">
-        <div className="flex justify-between">
+        <Link to={routes.project} className="flex justify-between">
           <h1 className="rb-text-heading tracking-wide">Peninsula</h1>
           <span className="rb-text-14 font-semibold">от 6,1 млн ₽</span>
-        </div>
+        </Link>
 
         <div className="mt-2 flex justify-between">
           <div className="rb-text-14 flex">

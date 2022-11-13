@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Link } from 'remix';
 import { Text } from '~/components';
-import { routes } from '~/config';
+import { routes } from '~/config/routes';
 
 export const FavoriteButton: FC = () => {
   return (

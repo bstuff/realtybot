@@ -1,6 +1,6 @@
 import { Link, LoaderFunction } from 'remix';
 import { ToastBlock, ProjectInfo, ProjectPagination } from '~/components';
-import { routes } from '~/config';
+import { routes } from '~/config/routes';
 
 interface LoaderData {}
 

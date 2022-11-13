@@ -1,4 +1,6 @@
 import { FC } from 'react';
+import { Link } from 'remix';
+import { routes } from '~/config/routes';
 
 export const ProjectDetailed: FC = () => {
   return (
@@ -119,14 +121,14 @@ export const ProjectDetailed: FC = () => {
       <div className="mt-10">
         <h3 className="rb-text-title">Выбери свое в Peninsula</h3>
         <div className="mt-5 flex justify-between gap-4">
-          <div className="flex flex-1 flex-col items-center rounded-2xl bg-[#E1F2FB] px-6 py-3">
+          <Link to={routes.mortgageCallback} className="flex flex-1 flex-col items-center rounded-2xl bg-[#E1F2FB] px-6 py-3">
             <img src={require('./assets/icn-calc-blue.svg')} alt="" />
             <div className="rb-text-11 mt-3 text-center font-semibold">Рассчитать ипотеку</div>
-          </div>
-          <div className="flex flex-1 flex-col items-center rounded-2xl bg-[#E7FBE1] px-6 py-3">
+          </Link>
+          <Link to={routes.chooseProjects} className="flex flex-1 flex-col items-center rounded-2xl bg-[#E7FBE1] px-6 py-3">
             <img src={require('./assets/icn-plan-green.svg')} alt="" />
             <div className="rb-text-11 mt-3 text-center font-semibold">Подобрать квартиру</div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
