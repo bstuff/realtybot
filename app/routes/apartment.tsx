@@ -1,5 +1,6 @@
-import { LoaderFunction } from 'remix';
+import { Link, LoaderFunction } from 'remix';
 import { ApartmentDetailed, FavoriteButton, ToastBlock } from '~/components';
+import { routes } from '~/config/routes';
 
 interface LoaderData {}
 
@@ -19,7 +20,9 @@ export default function () {
       <ToastBlock>
         <div className="flex flex-col gap-3">
           <FavoriteButton />
-          <button className="btn-md btn-primary">Позвонить</button>
+          <Link to={routes.contactCallback} className="btn btn-md btn-primary">
+            Позвонить
+          </Link>
         </div>
       </ToastBlock>
     </main>

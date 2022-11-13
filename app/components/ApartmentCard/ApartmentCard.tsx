@@ -1,5 +1,7 @@
 import { FC } from 'react';
+import { Link } from 'remix';
 import { SliderIndicator } from '~/components';
+import { routes } from '~/config/routes';
 
 export const ApartmentCard: FC = () => {
   return (
@@ -31,7 +33,9 @@ export const ApartmentCard: FC = () => {
         </div>
       </div>
       <div className="mt-4">
-        <button className="btn-md btn-secondary w-full">Подробнее</button>
+        <Link to={routes.apartment} className="btn btn-md btn-secondary w-full">
+          Подробнее
+        </Link>
       </div>
     </div>
   );

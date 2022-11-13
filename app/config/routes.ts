@@ -1,5 +1,7 @@
 export const routes = {
-  chooseApartments: '/project-card',
+  apartment: '/apartment',
+  apartments: '/apartment-card',
+  chooseApartments: '/choose-plan',
   chooseProjects: '/project-card',
   contactCallback: '/contact-callback',
   favorites: '/favorites',
