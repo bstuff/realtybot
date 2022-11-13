@@ -1,10 +1,10 @@
 import { Telegraf } from 'telegraf';
-import { TG_TOKEN } from '~/config';
+import { TG_IS_TEST_ENV, TG_TOKEN } from '~/config';
 import { childLogger } from '~/logger';
 
 import * as commands from './commands';
 
-export const bot = new Telegraf(TG_TOKEN, { telegram: { testEnv: false } });
+export const bot = new Telegraf(TG_TOKEN, { telegram: { testEnv: TG_IS_TEST_ENV } });
 
 const logger = childLogger({ category: 'tg.bot' });
 
