@@ -79,7 +79,7 @@ export const ProjectDetailed: FC = () => {
         <div className="rb-text-14 mt-2">
           Подберем подходящую квартиру в этом жилом комплексе всего за 3 клика и 10 секунд
         </div>
-        <button className="btn-md btn-white mt-6 w-full">Подобрать квартиру</button>
+        <Link to={routes.chooseApartments} className="btn btn-md btn-white mt-6 w-full">Подобрать квартиру</Link>
       </div>
 
       <div className="mt-16">
