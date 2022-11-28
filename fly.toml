@@ -1,23 +1,14 @@
-# Username:    postgres
-# Password:    abcdef0123456789abcdef0123456789abcdef0123456789
-# Hostname:    bnk-dev-db.internal
-# Proxy Port:  5432
-# PG Port:     5433
+# fly.toml file generated for dobuy-stg on 2022-11-29T00:02:00+01:00
 
-# fly.toml file generated for bnk-dev on 2022-04-05T21:02:53+03:00
-
-app = "bnk-dev"
+app = "dobuy-stg"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
-[build]
-  builder = "heroku/buildpacks:20"
-
 [env]
   NODE_ENV = "production"
-  PORT = "8080"
+  PORT = "3000"
 
 [experimental]
   allowed_public_ports = []
@@ -25,7 +16,7 @@ processes = []
 
 [[services]]
   http_checks = []
-  internal_port = 8080
+  internal_port = 3000
   processes = ["app"]
   protocol = "tcp"
   script_checks = []
