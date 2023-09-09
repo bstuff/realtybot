@@ -1,3 +1,7 @@
+## Demo video
+
+https://github.com/bstuff/realtybot/assets/11030417/743cfafc-5435-4e83-90b3-3c41b1b7f1af
+
 ## Getting started
 
 1) `npm install`
