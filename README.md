@@ -1,3 +1,9 @@
+# Realty bot
+
+This is a reduced version of telegram bot. It basically interacts with user commands in telegram and can open a web page with lead form right inside messenger. You can read about it [here](https://core.telegram.org/bots/webapps).
+
+It uses remix as a server and is packed into docker container which is deployed on [Fly.io](https://fly.io).
+
 ## Demo video
 
 https://github.com/bstuff/realtybot/assets/11030417/743cfafc-5435-4e83-90b3-3c41b1b7f1af
